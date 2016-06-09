@@ -3,10 +3,17 @@
 </ion-navbar>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Select a Fact</ion-list-header>
-    <button ion-item text-wrap *ngFor="let fact of facts"  (click)="selectFact(fact)">
-      <p>{{fact}}</p>
-    </button>
-  </ion-list>
+    <!-- <ion-list>
+      <ion-list-header>Select a Fact</ion-list-header>
+      <button ion-item text-wrap *ngFor="let fact of facts" (click)="selectFact(fact)">
+        <p>{{fact}}</p>
+      </button>
+    </ion-list> -->
+    <ion-list *ngFor="let sezione of gustiSezioni">
+      <ion-list-header>{{sezione.nome}}</ion-list-header>
+      <ion-item *ngFor="let gusto of sezione.gusti">
+        <ion-label>{{gusto.id}} {{gusto.nome}}</ion-label>
+        <ion-checkbox danger></ion-checkbox>
+      </ion-item>
+    </ion-list>
 </ion-content>
