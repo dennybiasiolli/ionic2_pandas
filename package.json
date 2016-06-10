@@ -40,6 +40,7 @@
   "name": "ionic2_pandas",
   "description": "ionic2_pandas: An Ionic project",
   "scripts": {
+    "cordova": "cordova",
     "ionic": "ionic"
   }
 }
