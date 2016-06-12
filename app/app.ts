@@ -8,11 +8,10 @@ import {TabsPage} from './pages/tabs/tabs';
   template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
-  static get parameters() {
-    return [[Platform]];
-  }
 
-  constructor(platform) {
+  private rootPage:any;
+
+  constructor(private platform:Platform) {
     this.rootPage = TabsPage;
 
     platform.ready().then(() => {

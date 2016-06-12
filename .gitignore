@@ -3,6 +3,9 @@ node_modules/
 www/build/
 platforms/
 plugins/
+typings/
+
+npm-debug.log
 
 # Platform iOS
 *.mode1v3
