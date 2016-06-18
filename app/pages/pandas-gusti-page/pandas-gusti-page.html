@@ -1,14 +1,9 @@
 <ion-navbar *navbar>
-  <ion-title>Facts</ion-title>
+  <ion-title>Gusti</ion-title>
 </ion-navbar>
 
 <ion-content>
-    <!-- <ion-list>
-      <ion-list-header>Select a Fact</ion-list-header>
-      <button ion-item text-wrap *ngFor="let fact of facts" (click)="selectFact(fact)">
-        <p>{{fact}}</p>
-      </button>
-    </ion-list> -->
+    <ion-item-divider light>Scegli il contenuto del tuo panino!</ion-item-divider>
     <ion-list *ngFor="let sezione of gustiSezioni">
       <ion-list-header>{{sezione.nome}}</ion-list-header>
       <ion-item *ngFor="let gusto of sezione.gusti">
@@ -16,4 +11,5 @@
         <ion-checkbox danger></ion-checkbox>
       </ion-item>
     </ion-list>
+    <button type="button" name="button" (click)="goToNextPage()">Prosegui</button>
 </ion-content>

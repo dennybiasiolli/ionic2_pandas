@@ -1,10 +1,15 @@
-export class Sezioni {
+export class Sezione {
   id: number;
   nome: string;
-  gusti: Gusti[];
+  gusti: Gusto[];
 }
 
-export class Gusti {
+export class Gusto {
+    id: number;
+    nome: string;
+}
+
+export class Salsa {
     id: number;
     nome: string;
 }

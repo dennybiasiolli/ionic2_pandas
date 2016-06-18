@@ -1,6 +1,6 @@
-import { Gusti, Sezioni } from '../models';
+import { Gusto, Sezione } from '../models';
 
-export var GUSTI_SEZIONI: Sezioni[] = [
+export var GUSTI_SEZIONI: Sezione[] = [
     {
         "id": 1,
         "nome": "carni e uova",

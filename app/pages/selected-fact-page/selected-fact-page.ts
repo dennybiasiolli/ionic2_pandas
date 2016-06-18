@@ -1,18 +1,19 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
+import { Sezione, Gusto } from '../../models';
 
 @Component({
   templateUrl: 'build/pages/selected-fact-page/selected-fact-page.html'
 })
 export class SelectedFactPage {
 
-  private fact:string;
+  private gusto:Gusto;
   
   constructor(private _navController: NavController, private _navParams: NavParams) {
   }
 
   ionViewWillEnter(){
-    this.fact = this._navParams.data.selectedFact;
+    this.gusto = this._navParams.data.selectedGusto;
   }
 
   goBack(){

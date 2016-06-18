@@ -1,0 +1,18 @@
+<ion-navbar *navbar>
+    <ion-title>Come?</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-list radio-group>
+        <ion-item-divider light>Come lo preferisci?</ion-item-divider>
+        <!-- <ion-list-headerCome lo preferisci?</ion-list-header> -->
+        <ion-item>
+            <ion-label>Caldo</ion-label>
+            <ion-radio value="caldo" (click)="goToNextPage()"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Freddo</ion-label>
+            <ion-radio value="freddo" (click)="goToNextPage()"></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-content>
