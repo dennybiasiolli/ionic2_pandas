@@ -1,15 +1,16 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {ScientificFactsPage} from '../scientific-facts-page/scientific-facts-page';
+import {OrdinePandasPage} from '../ordine-pandas-page/ordine-pandas-page';
+import {PandasNomePage} from '../pandas-nome-page/pandas-nome-page';
 
 @Component({
-  templateUrl: 'build/pages/home-page/home-page.html'
+    templateUrl: 'build/pages/home-page/home-page.html'
 })
 export class HomePage {
-  constructor(private _navController: NavController) {
-  }
+    constructor(private _navController: NavController) {
+    }
 
-  goToFactsPage(){
-    this._navController.push(ScientificFactsPage);
-  }
+    goToOrdinePandas() {
+        this._navController.push(PandasNomePage);
+    }
 }

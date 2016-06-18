@@ -1,0 +1,22 @@
+<ion-navbar *navbar>
+    <ion-title>Taglia?</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-list radio-group>
+        <ion-item-divider light>Taglia panino</ion-item-divider>
+        <!-- <ion-list-header>Taglia panino</ion-list-header> -->
+        <ion-item>
+            <ion-label>Normale (3 €)</ion-label>
+            <ion-radio value="normale" (click)="goToNextPage()"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Grosso (4 €)</ion-label>
+            <ion-radio value="grosso" (click)="goToNextPage()"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Gigante (5 €)</ion-label>
+            <ion-radio value="gigante" (click)="goToNextPage()"></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-content>
