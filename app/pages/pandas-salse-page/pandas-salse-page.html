@@ -8,7 +8,7 @@
         <!-- <ion-list-header>Vuoi qualche salsa nel tuo panino?</ion-list-header> -->
         <ion-item *ngFor="let salsa of salse">
             <ion-label>{{salsa.id}} {{salsa.nome}}</ion-label>
-            <ion-checkbox danger></ion-checkbox>
+            <ion-checkbox danger [(ngModel)]="salsa.selezionata"></ion-checkbox>
         </ion-item>
     </ion-list>
     <button type="button" name="button" (click)="goToNextPage()">Completa il tuo ordine</button>

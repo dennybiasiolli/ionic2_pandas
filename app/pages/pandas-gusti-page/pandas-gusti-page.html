@@ -8,7 +8,7 @@
       <ion-list-header>{{sezione.nome}}</ion-list-header>
       <ion-item *ngFor="let gusto of sezione.gusti">
         <ion-label>{{gusto.id}} {{gusto.nome}}</ion-label>
-        <ion-checkbox danger></ion-checkbox>
+        <ion-checkbox danger [(ngModel)]="gusto.selezionato"></ion-checkbox>
       </ion-item>
     </ion-list>
     <button type="button" name="button" (click)="goToNextPage()">Prosegui</button>
