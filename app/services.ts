@@ -46,11 +46,41 @@ export class PandasService {
     }
     setSalse(salse: Salsa[]) {
         this.salse = salse;
-        console.log(this.nome);
-        console.log(this.taglia);
-        console.log(this.dove);
-        console.log(this.come);
-        console.log(this.gusti);
-        console.log(this.salse);
+    }
+    getNomeSelected() {
+        let self = this;
+        return new Promise<string>(resolve =>
+            setTimeout(() => resolve(self.nome), 50)
+        );
+    }
+    getTagliaSelected() {
+        let self = this;
+        return new Promise<string>(resolve =>
+            setTimeout(() => resolve(self.taglia), 50)
+        );
+    }
+    getDoveSelected() {
+        let self = this;
+        return new Promise<string>(resolve =>
+            setTimeout(() => resolve(self.dove), 50)
+        );
+    }
+    getComeSelected() {
+        let self = this;
+        return new Promise<string>(resolve =>
+            setTimeout(() => resolve(self.come), 50)
+        );
+    }
+    getGustiSelected() {
+        let self = this;
+        return new Promise<Gusto[]>(resolve =>
+            setTimeout(() => resolve(self.gusti), 50)
+        );
+    }
+    getSalseSelected() {
+        let self = this;
+        return new Promise<Salsa[]>(resolve =>
+            setTimeout(() => resolve(self.salse), 50)
+        );
     }
 }

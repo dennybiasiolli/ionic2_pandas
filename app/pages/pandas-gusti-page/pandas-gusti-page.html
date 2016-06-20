@@ -1,15 +1,21 @@
 <ion-navbar *navbar>
-  <ion-title>Gusti</ion-title>
+    <ion-title>Gusti</ion-title>
 </ion-navbar>
 
 <ion-content>
     <ion-item-divider light>Scegli il contenuto del tuo panino!</ion-item-divider>
     <ion-list *ngFor="let sezione of gustiSezioni">
-      <ion-list-header>{{sezione.nome}}</ion-list-header>
-      <ion-item *ngFor="let gusto of sezione.gusti">
-        <ion-label>{{gusto.id}} {{gusto.nome}}</ion-label>
-        <ion-checkbox danger [(ngModel)]="gusto.selezionato"></ion-checkbox>
-      </ion-item>
+        <ion-list-header>{{sezione.nome}}</ion-list-header>
+        <ion-grid>
+            <ion-row *ngFor="let gusto of getGusti(sezione.gusti, true); let i = index">
+                <ion-col>
+                    <ion-item>
+                        <ion-label>{{gusto.id}} {{gusto.nome}}</ion-label>
+                        <ion-checkbox danger [(ngModel)]="gusto.selezionato"></ion-checkbox>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </ion-list>
     <button type="button" name="button" (click)="goToNextPage()">Prosegui</button>
 </ion-content>
