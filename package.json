@@ -35,5 +35,8 @@
     "cordova": "cordova",
     "ionic": "ionic",
     "typings": "typings"
-  }
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-x-socialsharing"
+  ]
 }

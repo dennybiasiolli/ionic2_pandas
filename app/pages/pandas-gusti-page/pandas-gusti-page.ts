@@ -8,7 +8,7 @@ import {Sezione, Gusto} from '../../models';
     templateUrl: 'build/pages/pandas-gusti-page/pandas-gusti-page.html'
 })
 export class PandasGustiPage {
-    private gustiSezioni: Object[];
+    private gustiSezioni: Sezione[];
     constructor(private _navController: NavController, private pandasService: PandasService) {
     }
 
@@ -19,6 +19,16 @@ export class PandasGustiPage {
     // selectGusto(gusto){
     //   this._navController.push(SelectedFactPage, {selectedGusto: gusto})
     // }
+
+    private getGusti(gusti: Gusto[], left: boolean) {
+        return gusti;
+        // if (left) {
+        //     return gusti.slice(0, Math.floor(gusti.length / 2) + 1);
+        // } else {
+        //     console.log(gusti.slice(Math.floor(gusti.length / 2)));
+        //     return gusti.slice(Math.floor(gusti.length / 2));
+        // }
+    }
 
     goToNextPage() {
         let gustiSelezionati: Gusto[];
