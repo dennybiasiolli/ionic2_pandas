@@ -10,7 +10,7 @@
             <ion-row *ngFor="let gusto of getGusti(sezione.gusti, true); let i = index">
                 <ion-col>
                     <ion-item>
-                        <ion-label>{{gusto.id}} {{gusto.nome}}</ion-label>
+                        <ion-label>{{gusto.id}} - {{gusto.nome}}</ion-label>
                         <ion-checkbox danger [(ngModel)]="gusto.selezionato"></ion-checkbox>
                     </ion-item>
                 </ion-col>

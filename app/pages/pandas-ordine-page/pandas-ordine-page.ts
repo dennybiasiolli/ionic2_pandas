@@ -10,6 +10,7 @@ import {Gusto, Salsa} from '../../models';
 export class PandasOrdinePage {
     private nome: string = '';
     private taglia: string = '';
+    private tipo: string = '';
     private dove: string = '';
     private come: string = '';
     private gusti: Gusto[];
@@ -20,6 +21,7 @@ export class PandasOrdinePage {
     ionViewWillEnter() {
         this.pandasService.getNomeSelected().then(nome => this.nome = nome);
         this.pandasService.getTagliaSelected().then(taglia => this.taglia = taglia);
+        this.pandasService.getTipoSelected().then(tipo => this.tipo = tipo);
         this.pandasService.getDoveSelected().then(dove => this.dove = dove);
         this.pandasService.getComeSelected().then(come => this.come = come);
         this.pandasService.getGustiSelected().then(gusti => this.gusti = gusti);
@@ -31,6 +33,7 @@ export class PandasOrdinePage {
         strMsg += 'Ciao,\n';
         strMsg += 'Sono "' + this.nome + '" e vorrei ordinare un panino:\n';
         strMsg += '- taglia: ' + this.taglia + '\n';
+        strMsg += '- tipo: ' + this.tipo + '\n';
         strMsg += '- dove: ' + this.dove + '\n';
         strMsg += '- come: ' + this.come + '\n';
         strMsg += '\n';
