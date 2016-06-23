@@ -2,8 +2,8 @@
     <ion-title>Gusti</ion-title>
 </ion-navbar>
 
-<ion-content>
-    <ion-item-divider light>Scegli il contenuto del tuo panino!</ion-item-divider>
+<ion-content padding>
+    <h4>Scegli il contenuto del tuo panino!</h4>
     <ion-list *ngFor="let sezione of gustiSezioni">
         <ion-list-header>{{sezione.nome}}</ion-list-header>
         <ion-grid>
@@ -17,5 +17,5 @@
             </ion-row>
         </ion-grid>
     </ion-list>
-    <button type="button" name="button" (click)="goToNextPage()">Prosegui</button>
+    <button fab-bottom fab-right style="position:fixed" *ngIf="getGustiSelezionati().length > 0" (click)="goToNextPage()">Prosegui</button>
 </ion-content>

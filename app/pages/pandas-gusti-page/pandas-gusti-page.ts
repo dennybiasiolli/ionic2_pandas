@@ -30,12 +30,18 @@ export class PandasGustiPage {
         // }
     }
 
+    getGustiSelezionati() {
+        let gustiSelezionati: Gusto[] = [];
+        if (this.gustiSezioni) {
+            gustiSelezionati = [].concat.apply([], this.gustiSezioni.map(
+                (sezione: Sezione) => sezione.gusti.filter(
+                    (gusto: Gusto) => gusto.selezionato)));
+        }
+        return gustiSelezionati;
+    }
+
     goToNextPage() {
-        let gustiSelezionati: Gusto[];
-        gustiSelezionati = [].concat.apply([], this.gustiSezioni.map(
-            (sezione: Sezione) => sezione.gusti.filter(
-                (gusto: Gusto) => gusto.selezionato)));
-        this.pandasService.setGusti(gustiSelezionati);
+        this.pandasService.setGusti(this.getGustiSelezionati());
         this._navController.push(PandasSalsePage);
     }
 }
