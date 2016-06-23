@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {PandasDovePage} from '../pandas-dove-page/pandas-dove-page';
+import {PandasTipoPage} from '../pandas-tipo-page/pandas-tipo-page';
 import {PandasService} from '../../services';
 
 @Component({
@@ -15,6 +15,6 @@ export class PandasTagliaPage {
 
     goToNextPage(taglia:string) {
         this.pandasService.setTaglia(taglia);
-        this._navController.push(PandasDovePage)
+        this._navController.push(PandasTipoPage)
     }
 }

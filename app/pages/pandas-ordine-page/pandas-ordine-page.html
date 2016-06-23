@@ -3,33 +3,29 @@
 </ion-navbar>
 
 <ion-content>
-    <ion-item-divider light>Ecco il riepilogo del tuo ordine!</ion-item-divider>
-    <ion-list>
+    <ion-item-divider light>{{nome}}, ecco il riepilogo del tuo ordine!</ion-item-divider>
+    <!-- <ion-list>
         <ion-list-header>Nome</ion-list-header>
         <ion-item>{{nome}}</ion-item>
-    </ion-list>
+    </ion-list> -->
     <ion-list>
-        <ion-list-header>Taglia panino</ion-list-header>
-        <ion-item>{{taglia}}</ion-item>
+        <ion-list-header>Tipo di panino</ion-list-header>
+        <ion-item>{{taglia}}, {{tipo}}, {{come}}</ion-item>
     </ion-list>
     <ion-list>
         <ion-list-header>Dove lo mangio</ion-list-header>
         <ion-item>{{dove}}</ion-item>
     </ion-list>
     <ion-list>
-        <ion-list-header>Come lo mangio</ion-list-header>
-        <ion-item>{{come}}</ion-item>
-    </ion-list>
-    <ion-list>
         <ion-list-header>Gusti</ion-list-header>
         <ion-item *ngFor="let gusto of gusti">
-            {{gusto.id}} {{gusto.nome}}
+            {{gusto.id}} - {{gusto.nome}}
         </ion-item>
     </ion-list>
     <ion-list>
         <ion-list-header>Salse</ion-list-header>
         <ion-item *ngFor="let salsa of salse">
-            {{salsa.id}} {{salsa.nome}}
+            {{salsa.id}} - {{salsa.nome}}
         </ion-item>
     </ion-list>
     <button type="button" name="button" (click)="whatsappShare()">Invia ordine su WhatsApp</button>

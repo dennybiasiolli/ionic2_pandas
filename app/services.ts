@@ -8,6 +8,7 @@ import { SALSE } from './mocks/Salse';
 export class PandasService {
     private nome: string = '';
     private taglia: string = '';
+    private tipo: string = '';
     private dove: string = '';
     private come: string = '';
     private gusti: Gusto[];
@@ -35,6 +36,9 @@ export class PandasService {
     setTaglia(taglia: string) {
         this.taglia = taglia;
     }
+    setTipo(tipo: string) {
+        this.tipo = tipo;
+    }
     setDove(dove: string) {
         this.dove = dove;
     }
@@ -57,6 +61,12 @@ export class PandasService {
         let self = this;
         return new Promise<string>(resolve =>
             setTimeout(() => resolve(self.taglia), 50)
+        );
+    }
+    getTipoSelected() {
+        let self = this;
+        return new Promise<string>(resolve =>
+            setTimeout(() => resolve(self.tipo), 50)
         );
     }
     getDoveSelected() {
