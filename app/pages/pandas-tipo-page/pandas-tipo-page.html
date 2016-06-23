@@ -1,11 +1,10 @@
 <ion-navbar *navbar>
-    <ion-title>Tipo?</ion-title>
+    <ion-title>Tipo di pane</ion-title>
 </ion-navbar>
 
-<ion-content>
+<ion-content padding>
     <ion-list radio-group>
-        <ion-item-divider light>Che tipo di pane vuoi?</ion-item-divider>
-        <!-- <ion-list-header>Che tipo di pane vuoi?</ion-list-header> -->
+        <h4>Che tipo di pane vuoi?</h4>
         <ion-item>
             <ion-label>Croccante</ion-label>
             <ion-radio value="croccante" (click)="goToNextPage('croccante')"></ion-radio>
