@@ -1,0 +1,17 @@
+<ion-navbar *navbar>
+    <ion-title>Tipo di pane</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+    <ion-list radio-group>
+        <h4>Che tipo di pane vuoi?</h4>
+        <ion-item>
+            <ion-label>Croccante</ion-label>
+            <ion-radio value="croccante" (click)="goToNextPage('croccante')"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Morbido</ion-label>
+            <ion-radio value="morbido" (click)="goToNextPage('morbido')"></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-content>

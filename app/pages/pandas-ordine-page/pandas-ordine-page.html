@@ -1,0 +1,29 @@
+<ion-navbar *navbar>
+    <ion-title>Gusti</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+    <h4>{{nome}}, ecco il riepilogo del tuo ordine!</h4>
+    <ion-list>
+        <ion-list-header>Ora</ion-list-header>
+        <ion-item>{{ora}}</ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>Tipo di panino</ion-list-header>
+        <ion-item>{{taglia}}, {{tipo}}, {{come}}</ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>Gusti</ion-list-header>
+        <ion-item *ngFor="let gusto of gusti">
+            {{gusto.id}} - {{gusto.nome}}
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>Salse</ion-list-header>
+        <ion-item *ngFor="let salsa of salse">
+            {{salsa.id}} - {{salsa.nome}}
+        </ion-item>
+    </ion-list>
+    <button type="button" name="button" (click)="whatsappShare()">Invia ordine su WhatsApp</button>
+    <button type="button" name="button" (click)="otherShare()">Condividi ordine</button>
+</ion-content>

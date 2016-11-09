@@ -1,13 +1,13 @@
 <ion-navbar *navbar>
-    <ion-title>Nome?</ion-title>
+    <ion-title>Come ti chiami?</ion-title>
 </ion-navbar>
 
-<ion-content>
+<ion-content padding>
     <ion-list>
         <ion-item>
             <ion-label floating>Questo PANINO è di</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="nome"></ion-input>
         </ion-item>
     </ion-list>
-    <button type="button" name="button" (click)="goToNextPage()">Prosegui</button>
+    <button *ngIf="nome" (click)="goToNextPage()">Prosegui</button>
 </ion-content>
