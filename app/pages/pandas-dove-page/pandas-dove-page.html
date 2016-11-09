@@ -1,18 +1,16 @@
 <ion-navbar *navbar>
-    <ion-title>Dove?</ion-title>
+    <ion-title>Dove lo mangi?</ion-title>
 </ion-navbar>
 
-<ion-content>
+<ion-content padding>
     <ion-list radio-group>
-        <ion-item-divider light>Dove lo mangi?</ion-item-divider>
-        <!-- <ion-list-header>Dove lo mangi?</ion-list-header> -->
         <ion-item>
             <ion-label>Lo mangio qui</ion-label>
-            <ion-radio value="qui" (click)="goToNextPage()"></ion-radio>
+            <ion-radio value="qui" (click)="goToNextPage('qui')"></ion-radio>
         </ion-item>
         <ion-item>
             <ion-label>Lo porto via</ion-label>
-            <ion-radio value="via" (click)="goToNextPage()"></ion-radio>
+            <ion-radio value="via" (click)="goToNextPage('via')"></ion-radio>
         </ion-item>
     </ion-list>
 </ion-content>

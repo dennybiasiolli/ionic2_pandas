@@ -4,17 +4,17 @@ import {PandasComePage} from '../pandas-come-page/pandas-come-page';
 import {PandasService} from '../../services';
 
 @Component({
-    templateUrl: 'build/pages/pandas-dove-page/pandas-dove-page.html'
+    templateUrl: 'build/pages/pandas-tipo-page/pandas-tipo-page.html'
 })
-export class PandasDovePage {
+export class PandasTipoPage {
     constructor(private _navController: NavController, private pandasService: PandasService) {
     }
 
     ionViewWillEnter() {
     }
 
-    goToNextPage(dove: string) {
-        this.pandasService.setDove(dove);
+    goToNextPage(tipo: string) {
+        this.pandasService.setTipo(tipo);
         this._navController.push(PandasComePage)
     }
 }

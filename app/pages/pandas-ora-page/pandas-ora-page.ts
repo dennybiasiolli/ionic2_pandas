@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {PandasOraPage} from '../pandas-ora-page/pandas-ora-page';
+import {PandasTagliaPage} from '../pandas-taglia-page/pandas-taglia-page';
 import {PandasService} from '../../services';
 
 @Component({
-    templateUrl: 'build/pages/pandas-nome-page/pandas-nome-page.html'
+    templateUrl: 'build/pages/pandas-ora-page/pandas-ora-page.html'
 })
-export class PandasNomePage {
-    private nome: string;
+export class PandasOraPage {
+    private ora: string = '13:00';
     constructor(private _navController: NavController, private pandasService: PandasService) {
     }
 
@@ -15,7 +15,7 @@ export class PandasNomePage {
     }
 
     goToNextPage(){
-        this.pandasService.setNome(this.nome);
-        this._navController.push(PandasOraPage)
+        this.pandasService.setOra(this.ora);
+        this._navController.push(PandasTagliaPage)
     }
 }

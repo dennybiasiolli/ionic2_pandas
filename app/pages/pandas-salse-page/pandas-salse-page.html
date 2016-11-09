@@ -2,14 +2,13 @@
     <ion-title>Salse</ion-title>
 </ion-navbar>
 
-<ion-content>
+<ion-content padding>
     <ion-list>
-        <ion-item-divider light>Vuoi qualche salsa nel tuo panino?</ion-item-divider>
-        <!-- <ion-list-header>Vuoi qualche salsa nel tuo panino?</ion-list-header> -->
+        <h4>Vuoi qualche salsa nel tuo panino?</h4>
         <ion-item *ngFor="let salsa of salse">
-            <ion-label>{{salsa.id}} {{salsa.nome}}</ion-label>
-            <ion-checkbox danger></ion-checkbox>
+            <ion-label>{{salsa.id}} - {{salsa.nome}}</ion-label>
+            <ion-checkbox danger [(ngModel)]="salsa.selezionata"></ion-checkbox>
         </ion-item>
     </ion-list>
-    <button type="button" name="button" (click)="goToNextPage()">Completa il tuo ordine</button>
+    <button fab-bottom fab-right style="position:fixed" (click)="goToNextPage()">Completa il tuo ordine</button>
 </ion-content>
