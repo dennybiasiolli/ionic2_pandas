@@ -7,6 +7,7 @@ import { SALSE } from './mocks/Salse';
 @Injectable()
 export class PandasService {
     private nome: string = '';
+    private ora: string = '';
     private taglia: string = '';
     private tipo: string = '';
     private dove: string = '';
@@ -33,6 +34,9 @@ export class PandasService {
     setNome(nome: string) {
         this.nome = nome;
     }
+    setOra(ora: string) {
+        this.ora = ora;
+    }
     setTaglia(taglia: string) {
         this.taglia = taglia;
     }
@@ -55,6 +59,12 @@ export class PandasService {
         let self = this;
         return new Promise<string>(resolve =>
             setTimeout(() => resolve(self.nome), 50)
+        );
+    }
+    getOraSelected() {
+        let self = this;
+        return new Promise<string>(resolve =>
+            setTimeout(() => resolve(self.ora), 50)
         );
     }
     getTagliaSelected() {

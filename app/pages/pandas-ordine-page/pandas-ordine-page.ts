@@ -9,6 +9,7 @@ import {Gusto, Salsa} from '../../models';
 })
 export class PandasOrdinePage {
     private nome: string = '';
+    private ora: string = '';
     private taglia: string = '';
     private tipo: string = '';
     private dove: string = '';
@@ -20,6 +21,7 @@ export class PandasOrdinePage {
 
     ionViewWillEnter() {
         this.pandasService.getNomeSelected().then(nome => this.nome = nome);
+        this.pandasService.getOraSelected().then(ora => this.ora = ora);
         this.pandasService.getTagliaSelected().then(taglia => this.taglia = taglia);
         this.pandasService.getTipoSelected().then(tipo => this.tipo = tipo);
         this.pandasService.getDoveSelected().then(dove => this.dove = dove);
@@ -31,7 +33,7 @@ export class PandasOrdinePage {
     getStrShareMsg() {
         let strMsg: string = '';
         strMsg += 'Ciao,\n';
-        strMsg += 'Sono ' + this.nome + ' e vorrei prenotare un panino:\n';
+        strMsg += 'Sono ' + this.nome + ' e vorrei prenotare un panino per le ' + this.ora + ':\n';
         strMsg += '- ' + this.taglia + ', ' + this.tipo + ', ' + this.come + '\n';
         strMsg += '- gusti:\n';
         this.gusti.forEach(

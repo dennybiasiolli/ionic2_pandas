@@ -1,0 +1,15 @@
+<ion-navbar *navbar>
+    <ion-title>Come ti chiami?</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label>Vengo a ritirarlo a quest'ora</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-datetime displayFormat="HH:mm" [(ngModel)]="ora"></ion-datetime>
+        </ion-item>
+    </ion-list>
+    <button *ngIf="ora" (click)="goToNextPage()">Prosegui</button>
+</ion-content>

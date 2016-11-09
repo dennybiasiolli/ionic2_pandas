@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {PandasTagliaPage} from '../pandas-taglia-page/pandas-taglia-page';
+import {PandasOraPage} from '../pandas-ora-page/pandas-ora-page';
 import {PandasService} from '../../services';
 
 @Component({
@@ -16,6 +16,6 @@ export class PandasNomePage {
 
     goToNextPage(){
         this.pandasService.setNome(this.nome);
-      this._navController.push(PandasTagliaPage)
+        this._navController.push(PandasOraPage)
     }
 }
