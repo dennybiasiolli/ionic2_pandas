@@ -1,12 +1,12 @@
 export var DATI_PANDAS = {
     "taglie": [{
-        "nome": "normale",
+        "nome": "normale (3€)",
         "prezzo": 3
     }, {
-        "nome": "grosso",
+        "nome": "grosso (4€)",
         "prezzo": 4
     }, {
-        "nome": "gigante",
+        "nome": "gigante (5€)",
         "prezzo": 5
     }],
     "tipologia": [

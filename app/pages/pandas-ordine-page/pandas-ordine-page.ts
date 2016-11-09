@@ -31,12 +31,8 @@ export class PandasOrdinePage {
     getStrShareMsg() {
         let strMsg: string = '';
         strMsg += 'Ciao,\n';
-        strMsg += 'Sono "' + this.nome + '" e vorrei ordinare un panino:\n';
-        strMsg += '- taglia: ' + this.taglia + '\n';
-        strMsg += '- tipo: ' + this.tipo + '\n';
-        strMsg += '- dove: ' + this.dove + '\n';
-        strMsg += '- come: ' + this.come + '\n';
-        strMsg += '\n';
+        strMsg += 'Sono ' + this.nome + ' e vorrei prenotare un panino:\n';
+        strMsg += '- ' + this.taglia + ', ' + this.tipo + ', ' + this.come + '\n';
         strMsg += '- gusti:\n';
         this.gusti.forEach(
             (gusto: Gusto) => strMsg += ' -> ' + gusto.id.toString() + ' ' + gusto.nome + '\n'

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {PandasDovePage} from '../pandas-dove-page/pandas-dove-page';
+import {PandasComePage} from '../pandas-come-page/pandas-come-page';
 import {PandasService} from '../../services';
 
 @Component({
@@ -15,6 +15,6 @@ export class PandasTipoPage {
 
     goToNextPage(tipo: string) {
         this.pandasService.setTipo(tipo);
-        this._navController.push(PandasDovePage)
+        this._navController.push(PandasComePage)
     }
 }
