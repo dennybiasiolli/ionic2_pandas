@@ -13,10 +13,6 @@
         <ion-item>{{taglia}}, {{tipo}}, {{come}}</ion-item>
     </ion-list>
     <ion-list>
-        <ion-list-header>Dove lo mangio</ion-list-header>
-        <ion-item>{{dove}}</ion-item>
-    </ion-list>
-    <ion-list>
         <ion-list-header>Gusti</ion-list-header>
         <ion-item *ngFor="let gusto of gusti">
             {{gusto.id}} - {{gusto.nome}}
